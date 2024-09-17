@@ -1,4 +1,4 @@
-FROM rabbitmq:3.6-management-alpine
+FROM k8s.master/all/rabbitmq:3.6-management-alpine
 
 # VAR ${VAR: -"value"} means the values may be overriden
 
@@ -20,7 +20,7 @@ ENV RABBITMQ_CTL_ERL_ARGS ${RABBITMQ_CTL_ERL_ARGS:-"-proto_dist inet_tls"}
 # Copy self signed certificates
 COPY config/ssl/ /etc/rabbitmq/ssl
 
-# Add custom plugins
+# Add custom pluginsK
 COPY config/etc/enabled_plugins /etc/rabbitmq/enabled_plugins
 
 # Insert custom configuration
