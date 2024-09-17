@@ -1,4 +1,4 @@
-FROM k8s.master/all/rabbitmq:3.6-management-alpine
+FROM k8s.master/all/library/rabbitmq:3.6-management-alpine
 
 # VAR ${VAR: -"value"} means the values may be overriden
 
